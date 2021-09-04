@@ -182,8 +182,8 @@ a{
     width: 50px;
 }
 
-/*----------- MEDIA QUERIES STANDARD ------------ */
 
+/*----------- MEDIA QUERIES STANDARD ------------ */
 @media (max-width: 1200px){
 	body{
 		font-size: 12px;
