@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+|* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 300;
+	background-color: #202630;
+	font-size: 16px;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+.contenedor {
+	width: 99%;
+	max-width: 100em;
+	margin: 0em auto;
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		'header			header   	header'
+		'preguntas      preguntas       preguntas '
+		'footer	 		footer 		footer';
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.title-preguntas{
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #202630;
+    text-align: center;
+    background-color: #4c9596;
+    border-radius: 0.3125em;
+    padding: 0.9375em;
+}
+
+
+
+/* ---------- PREGUNTAS ----------*/
+
+.preguntas {
+    display: flex;
+    background-size: cover;
+    flex-wrap: wrap;
+	grid-area: preguntas;
+    position: relative;
+	background-color: #FDD261;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.swiper {
+    margin-top: 10px;
+    width: 80%;
+    height: 70%;
+    position:relative;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-color: #202630;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.preguntas-content{
+    color: #FDD261;
+    padding: 55px;
+}
+.preguntas-content h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+.preguntas-content p{
+    color: #EEEEEE;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+/* ----------- FOOTER -----------*/
+.footer{
+    grid-area: footer;
+    background-color: #FDD261;
+    align-items: center;
+    flex-direction: column;
+    padding:1.25em ;
+}
+
+.footer .redes-socialesf{
+    position: relative;
+    justify-content: center;
+    padding-left: 1px;
+    display: flex;
+}
+
+.footer .redes-socialesf li{
+    list-style: none;
+}
+
+.footer .redes-socialesf li a{
+    text-decoration: none;
+    margin: 0 1.25em;
+}
+
+.footer .redes-socialesf li a img{
+    filter: invert(1);
+    max-width: 1.875em;
+}
+
+.copyrightText{
+    margin-top: 1.25em;
+    font-size: 0.8125em;
+    font-weight: 300;
+    color:#000;
+    text-align: center;
+}
+
+.copyrightText a{
+    text-decoration: none;
+    color: #000;
+}
+
+.appWhatsapp{
+    position : fixed;
+    right : 2.625em;
+    bottom : 1.875em;
+    width : 3.55em;
+    z-index : 1000;
+}
+
+.btn{
+    position : fixed;
+    right : 3em;
+    bottom : 7em;
+    width : 3.25em;
+    z-index : 1000;
+	background-color: #4c9596;
+	border-radius: 100px;
+}
+
+.btn-2{
+    color: #202630;
+	width: 18.625em;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.625em; 
+	background-color: #4c9596;
+	font-size: 1em; 
+	letter-spacing: 0.0625em;
+	border-radius: 5px;
+    margin: 35px;
+}
+
+.btn-img{
+    width: 50px;
+}
+
+/*----------- MEDIA QUERIES STANDARD ------------ */
+
+@media (max-width: 1200px){
+	body{
+		font-size: 12px;
+	}
+
+    .btn{
+        width: 55px;
+        right : 1.5em;
+        bottom : 9em;
+    }
+
+	.btn-img{
+		width: 60px;
+    }
+}
+
+@media (max-width: 992px){
+	.contenedor {
+		grid-template-areas:
+		'header			header   	header'
+		'preguntas      preguntas       preguntas '
+		'footer	 		footer 		footer';
+	}
+
+    .appWhatsapp{
+        right : 3.5em;
+        bottom : 2em;
+    }
+
+	.btn-link{
+		margin-left: 0%;
+	}
+
+	.especificacion{
+		padding : 10px;
+	}
+
+	.aclaracion .cards-aclaracion .card{
+		font-size: 15px;
+	}
+
+}
+
+@media (max-width: 768px){
+    .preguntas{
+        padding: 0;
+    }
+
+    .preguntas-content{
+        padding: 10px;
+    }
+
+    .preguntas-content h1{
+        font-size: 25px;
+    }
+
+    .preguntas-content p{
+        font-size: 13px;
+    }
+
+    .swiper {
+        padding: 0;
+    }
+
+    .btn{
+        width: 55px;
+        right : 1.5em;
+        bottom : 9em;
+    }
+
+	.btn-img{
+		width: 50px;
+	}
+
+    .btn-2{
+        font-size: 13px;
+    }
+
+    .appWhatsapp{
+        right : 4em;
+        bottom : 2em;
+    }
+
+}
+
+@media (max-width: 576px){
+	body{
+		font-size: 10px;
+	}
+}
+
+

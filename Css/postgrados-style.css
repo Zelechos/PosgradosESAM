@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+|* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-weight: 300;
+	background-color: #202630;
+	font-size: 16px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+a{
+	text-decoration: none;
+}
+
+
+.contenedor {
+	width: 99%;
+	max-width: 100em;
+	margin: 0em auto;
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		'header			header   	header'
+		'destacado		destacado 	destacado'
+		'postgrados		postgrados 	postgrados'
+		'especificacion	 especificacion  especificacion'
+		'contenido		contenido 	aside'
+		'footer	 		footer 		footer';
+}
+
+/* ---------- HEADER ----------*/
+.nutricion{
+	background-image: url(../assets/img/nutricionista.jpg);
+}
+
+.calidadsalud{
+	background-image: url(../assets/img/calidadsalud.jpg);
+}
+
+.gerencia{
+	background-image: url(../assets/img/gerenciasalud.jpg);
+}
+
+.epidemiologiasalud{
+	background-image: url(../assets/img/epidemiologiasalud.jpeg);
+}
+
+.derechofamilia{
+	background-image: url(../assets/img/derechofamiliajpg.jpg);
+}
+
+.estructural{
+	background-image: url(../assets/img/banner.jpg);
+}
+
+.epipolitica{
+	background-image: url(../assets/img/epidemiologiasalud.jpeg);
+}
+
+.publica{
+	background-image: url(../assets/img/calidadsalud.jpg);
+}
+
+.header {
+	padding: 2.25em;
+	grid-area: header;
+	background-repeat: no-repeat;
+	background-size: 100% 120%;
+	height: 50vh;
+}
+
+.header .logo {
+	text-align: center;
+	letter-spacing: 0.1875em;
+}
+
+.logo h1 {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 2.875em;
+	color: #fdd261;
+	background-color: #202630;
+	border-radius: 15px;
+	border:2px solid #fdd261;
+}
+
+.logo .escudo{
+	width: 70%;
+}
+
+.logo .iniciales-logo {
+	padding: 0.3125em;
+	border: 0.125em solid #202630;
+	display: inline-block;
+	font-size: 1em;
+	margin-bottom: 0.9375em;
+}
+
+
+/* ---------- POSTGRADOS ELEGIDO ----------*/
+
+.postgrado-elegido.destacado {
+	grid-area: destacado;
+	color: #EEEEEE;
+	background-color: #202630;
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+}
+
+.postgrado-elegido .contenedor-texto {
+	padding: 1.5em;
+	width: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.postgrado-elegido .contenedor-thumbnail {
+	width: 50%;
+}
+
+.postgrado-elegido .titulo {
+	margin-bottom: 0.625em;
+	font-size: 1.5625em;
+}
+
+.postgrado-elegido .titulo a {
+	font-weight: 400;
+	color: #202630;
+}
+
+.postgrado-elegido .fecha {
+	font-size: 1em;
+	color: #868b8d;
+	margin-bottom: 0.625em;
+}
+
+.postgrado-elegido .extracto {
+	line-height: 1.5625em; 
+	font-weight: 300;
+	margin-bottom: 1.25em; 
+	color: #4c9596;
+}
+
+.postgrado-elegido.destacado .contenedor-thumbnail {
+	min-height: 100%;
+	width: 100%;
+}
+
+.postgrado-elegido.destacado .contenedor-thumbnail a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.destacado .titulo a {
+	color: #fdd261;
+	font-size:20px;
+}
+
+.destacado .titulo::after {
+	content: '';
+	margin: 0.625em 0; 
+	display: block;
+	background-color: #868686;
+	width: 6em; 
+	height: 0.0625em;
+}
+
+.destacado .extracto li {
+	font-size:20px;
+	color: #EEEEEE;
+}
+
+/* ----------- ESPECIFICACIONES DEL POSTGRADO -----------*/
+.especificacion{
+    grid-area: especificacion;
+	font-family: 'IBM Plex Sans', sans-serif;
+    padding: 3.125em;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    align-items: center;
+    background-color: #FDD261;
+}
+
+.especificacion .content-especificacion{
+    padding: 1.25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    background-color: #202630;
+    margin-top: 3.125em;
+    padding:1.875em;
+    border-radius: 0.3125em;
+}
+
+.especificacion .title-especificacion{
+    text-transform: uppercase;
+    color: #202630;
+    text-align: center;
+    z-index: 10;
+    background-color: #FDD261;
+    border-radius: 0.3125em;
+    padding: 0.9375em;
+}
+
+.content-especificacion h3{
+    text-transform: uppercase;
+    color:#FDD261;
+    margin-bottom:0.1375em;
+    position: relative;
+    font-size: 1.5625em;
+}
+
+.content-especificacion p , ul ,li{
+    padding: 0.3125em;
+    color: #EEEEEE;
+	font-size: 15px;
+}
+
+.content-especificacion p span{
+    color: #4c9596;
+}
+
+/* ESPICIFICACION DEL POSTGRADO */
+
+
+
+
+/*---------- DOCENTES ----------*/
+.aclaracion{
+    grid-area: postgrados;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    align-items: center;
+    background-color: #EEEEEE;
+    padding: 1.875em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.aclaracion::before{
+    content : '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#FDD261,#FDD261);
+    clip-path: circle(35% at right 90%);
+}
+
+.aclaracion::after{
+    content : '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#4c9596,#4c9596);
+    clip-path: circle(32% at 2% 2%);
+}
+
+.aclaracion .cards-aclaracion{
+    position: relative;
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.aclaracion .cards-aclaracion .card{
+    position: relative;
+    width: 18.75em;
+    height:33.75em;
+    margin:0.9375em;
+    border-radius: 0.9375em;
+    background-color :#202630;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* .aclaracion .cards-aclaracion .card:hover{
+	box-shadow: 10px 10px 10px 10px #4c9596;
+} */
+
+.aclaracion .cards-aclaracion .card .content-card{
+    padding: 0.7em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+
+.aclaracion .cards-aclaracion .card .content-card .img-card{
+	width: 80%;
+	border-radius: 1em; 
+	-moz-border-radius: 1em; 
+	-webkit-border-radius: 1em; 
+	overflow:hidden;
+}
+
+.aclaracion .cards-aclaracion .card .content-card h3{
+    font-size: 1.2em;
+    color:#FDD261;
+	text-transform: uppercase;
+}
+
+
+.aclaracion .cards-aclaracion .card .content-card p{
+    font-size: 1em;
+	color: #EEEEEE;
+}
+
+/*---------- BOTONES ----------*/
+
+.btn-link {
+	color: #202630;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.425em; 
+	background-color: #fdd261;
+	font-size: 1.2em; 
+	letter-spacing: 0.0625em;
+	margin-left: 65%;
+	border-radius: 5px;
+}
+
+.btn1-link {
+	color: #202630;
+	width: 11.625em;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.625em; 
+	background-color: #fdd261;
+	font-size: 0.8em; 
+	letter-spacing: 0.0625em;
+	border-radius: 5px;
+}
+
+.btn-link:hover {
+	background: #4c9596;
+	text-decoration: none;
+}
+
+.btn1-link:hover {
+	background: #4c9596;
+	text-decoration: none;
+}
+
+/*---------- CONTENIDO ----------*/
+
+.contenido {
+	grid-area: contenido;
+	display: grid;
+	grid-template-columns: 1;
+	grid-gap: 1.25em; 
+}
+
+.opciones {
+	display: flex;
+	background: #202630;
+	border-radius:5px
+}
+
+.opciones .contenedor-texto{
+	padding-left:20px;
+	color: #EEEEEE;
+}
+
+.opciones .contenedor-texto .titulo a{
+	color: #FDD261;
+}
+
+.opciones:hover{
+	box-shadow: 5px 5px 5px 5px #FDD261;
+}
+
+
+
+/*---------- SIDEBAR ----------*/
+.sidebar {
+	padding: 5em 1.5625em; 
+	text-align: center;
+	min-height: 6.25em; 
+	grid-area: aside;
+	background: #202630;
+	color: #4c9596;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+.sidebar:hover{
+	box-shadow: 5px 5px 5px 5px #4c9596;
+}
+
+.sidebar .acerca-de img {
+	border-radius: 100%;
+	height: 10em; 
+	width: 10em; 
+	margin-bottom: 1.5625em; 
+}
+
+.sidebar .bio {
+	margin-bottom: 1.5625em; 
+	font-size: 1.25em; 
+	line-height: 1.5625em; 
+}
+
+.sidebar .menu {
+	width: 100%;
+	display: inline-block;
+	background: #ccc;
+}
+
+.sidebar .menu a {
+	padding: 1.5625em; 
+	color: #202630;
+	background-color: #4c9596;
+	display: block;
+	font-size: 1em;
+	text-transform: uppercase;
+	border: 2px solid #202630;
+}
+
+.sidebar .menu a:hover {
+	background: #FDD261;
+}
+
+/* ----------- FOOTER -----------*/
+.footer{
+    grid-area: footer;
+    background-color: #FDD261;
+    align-items: center;
+    flex-direction: column;
+    padding:1.25em ;
+}
+
+.footer .redes-socialesf{
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.footer .redes-socialesf li{
+    list-style: none;
+}
+
+.footer .redes-socialesf li a{
+    text-decoration: none;
+    margin: 0 1.25em;
+}
+
+.footer .redes-socialesf li a img{
+    filter: invert(1);
+    max-width: 1.875em;
+}
+
+.copyrightText{
+    margin-top: 1.25em;
+    font-size: 0.8125em;
+    font-weight: 300;
+    color:#000;
+    text-align: center;
+}
+
+.copyrightText a{
+    text-decoration: none;
+    color: #000;
+}
+
+.appWhatsapp{
+    position : fixed;
+    right : 2.625em;
+    bottom : 1.875em;
+    width : 3.55em;
+    z-index : 1000;
+}
+
+.btn{
+    position : fixed;
+    right : 3em;
+    bottom : 7em;
+    width : 3.25em;
+    z-index : 1000;
+	background-color: #FDD261;
+	border-radius: 100px;
+}
+
+.btn-img{
+    width: 50px;
+}
+
+/*----------- MEDIA QUERIES STANDARD ------------ */
+
+@media (max-width: 1200px){
+	body{
+		font-size: 12px;
+	}
+
+}
+
+@media (max-width: 992px){
+	.contenedor {
+		grid-template-areas:
+			'header			header   	header'
+			'destacado		destacado 	destacado'
+			'especificacion	 especificacion  especificacion'
+			'postgrados		postgrados 	postgrados'
+			'contenido		contenido 	contenido'
+			'aside          aside       aside'
+			'footer	 		footer 		footer';
+	}
+
+	.header .logo{
+		padding : 0;
+	}
+
+	.btn-link{
+		margin-left: 0%;
+	}
+
+	.especificacion{
+		padding : 10px;
+	}
+
+	.aclaracion .cards-aclaracion .card{
+		font-size: 15px;
+	}
+
+}
+
+@media (max-width: 768px){
+
+	.nutricion{
+		background-image: url(../assets/img/nutricion-especializada.jpeg);
+	}
+
+	.calidadsalud{
+		background-image: url(../assets/img/gestion-calidad.jpeg);
+	}
+
+	.gerencia{
+		background-image: url(../assets/img/gestion-hospitalaria.jpeg);
+	}
+
+	.derechofamilia{
+		background-image: url(../assets/img/derecho-familia.jpeg);
+	}
+
+	.estructural{
+		background-image: url(../assets/img/ingenieria-estructural.jpeg);
+	}
+
+	.epipolitica{
+		background-image: url(../assets/img/epidemiologia-politicas.jpeg);
+	}
+
+	.publica{
+		background-image: url(../assets/img/salud-publica.jpeg);
+	}
+
+	.epidemiologiasalud{
+		background-image: url(../assets/img/salud-publica.jpeg);
+	}
+
+	.postgrado-elegido.destacado {
+		grid-template-columns: 1fr;
+	}	
+
+
+	.btn{
+        right : 1.5em;
+        bottom : 7em;
+    }
+
+	.btn-img{
+		width: 30px;
+	}
+
+    .appWhatsapp{
+        right : 1.5em;
+        bottom : 2em;
+    }
+}
+
+@media (max-width: 576px){
+	body{
+		font-size: 10px;
+	}
+}
+
+

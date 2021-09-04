@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #202630;
+}
+.contenedor {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #202630;
+	width: 100%;
+	max-width: 100em;
+	margin: 0em auto;
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+        'head		head   	head'
+        'container  container  container'
+		'footer	 		footer 		footer';
+}
+
+.head{
+    grid-area: head;
+    display:flex;
+    align-items: center;
+    position: fixed;
+}
+
+.container{
+    grid-area: container;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.title-modulo{
+    margin: 0 auto;
+    width: 100%;
+    text-transform: uppercase;
+    color: #202630;
+    text-align: center;
+    background-color: #FDD261;
+    border-radius: 0.3125em;
+    padding: 0.9375em;
+    margin-bottom: 150px;
+}
+
+.timeline{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul{
+    list-style: none;
+}
+
+.timeline ul li{
+    height: 130px;
+    padding: 20px;
+    background-color: #1e1f22;
+    color: #EEEEEE;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* .timeline ul li:hover{
+    height: auto;
+    padding: 20px;
+    background-color: #1e1f22;
+    color: #EEEEEE;
+    border-radius: 10px;
+    margin-bottom: 20px;
+} */
+
+.timeline ul li:last-child{
+    margin-bottom: 200px;
+}
+
+.timeline-content h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p{
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 300;
+    display: none;
+}
+
+/* .timeline ul li:hover .timeline-content p{
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 300;
+    display: inherit;
+} */
+
+.timeline-content .solution{
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    letter-spacing: 2px;
+}
+
+/*Animacion background*/
+.block{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #1e1f22;
+    box-shadow: 10px 10px 50px rgb(0,0,0,0.5);
+}
+
+
+/* ----------- FOOTER -----------*/
+.footer{
+    grid-area: footer;
+    background-color: #FDD261;
+    align-items: center;
+    flex-direction: column;
+    padding:1.25em ;
+    z-index: 10;
+}
+
+.footer .redes-socialesf{
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.footer .redes-socialesf li{
+    list-style: none;
+}
+
+.footer .redes-socialesf li a{
+    text-decoration: none;
+    margin: 0 1.25em;
+}
+
+.footer .redes-socialesf li a img{
+    filter: invert(1);
+    max-width: 1.875em;
+}
+
+.copyrightText{
+    margin-top: 1.25em;
+    font-size: 0.8125em;
+    font-weight: 300;
+    color:#000;
+    text-align: center;
+}
+
+.copyrightText a{
+    text-decoration: none;
+    color: #000;
+}
+
+.appWhatsapp{
+    position : fixed;
+    right : 5em;
+    bottom : 9em;
+    width : 1.25em;
+    z-index : 1000;
+}
+
+.btn{
+    position : fixed;
+    right : 3em;
+    bottom : 15em;
+    width : 3.25em;
+    z-index : 1000;
+	background-color: #FDD261;
+	border-radius: 100px;
+}
+
+.btn-img{
+    width: 50px;
+}
+
+/*Corregir formulario*/
+@media only screen and (min-width: 768px){
+
+    
+
+    .timeline::before{
+        content: "";
+        position: absolute;
+        margin-top: 150px;
+        height: 87%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: gray;
+    }
+
+    .timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+        transform: translateX(-10%);
+        border-radius: 20px 0px 20px 20px; 
+    }
+
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(10%);
+        border-radius: 0px 20px  20px 20px; 
+    }
+
+    .timeline ul li::after{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+    }
+
+    .timeline ul li:nth-child(odd)::after{
+        transform: translate(50%, -50%);
+        right: -40px;
+    }
+
+    .timeline ul li:nth-child(even)::after{
+        transform: translate(-50%, 50%);
+        left: -40px;
+    }
+
+    .timeline ul li:hover:after{
+        background-color: #FDD261;
+    }
+
+    .timeline-content .solution{
+        position: absolute;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px){
+    .timeline ul{
+        margin-top: -100px;
+        margin-bottom: -150px;
+    }
+
+    .timeline ul li{
+        height: 150px;
+    }
+
+    .timeline-content .solution{
+        margin-bottom: 10px;
+    }
+
+    .head{
+        display: none;
+    }
+
+    .btn{
+        right : 1em;
+        bottom : 7em;
+    }
+
+    .appWhatsapp{
+        right : 3.5em;
+        bottom : 2em;
+    }
+}

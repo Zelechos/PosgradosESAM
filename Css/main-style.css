@@ -1,0 +1,1085 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+/* --------- POR DEFECTO ---------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #202630;
+    font-weight: 300;
+	font-size: 16px;
+}
+
+img {
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+}
+
+#toggle{
+    position: fixed;
+    width: 3.125em;
+    height: 3.125em;
+    right: 3.75em;
+    top: 0.875em;
+    cursor: pointer;
+    background-color: #4c9596;
+    border-radius:0.25em;
+    z-index: 100;
+}
+
+#toggle:before{
+    content: '';
+    position: absolute;
+    top: 1.0625em;
+    width: 50%;
+    height: 0.125em;
+    left: 0.75em;
+    background: #EEEEEE;
+}
+
+#toggle:after{
+    content: '';
+    left: 0.75em;
+    position: absolute;
+    bottom: 1.0625em;
+    width: 50%;
+    height: 0.125em;
+    background: #EEEEEE;
+}
+
+
+/*------------- CONTENEDOR -------------*/
+.contenedor.active #toggle:before{ 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(45deg);
+}
+
+.contenedor.active #toggle:after{ 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%) rotate(-45deg);
+}
+
+.contenedor.active {
+    transform: translateX(-25em);
+}
+
+.contenedor {
+    transition: 0.5s;
+    width: 99%;
+    max-width: 100em;
+    margin: 0em auto;
+    display: grid;
+    grid-gap: 0em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        'header			header   	header'
+        'banner			banner   	banner'
+        'postgrados		postgrados 	postgrados'
+        'about		    about     	about'
+        'information	information  information'
+        'footer	 		footer 		footer';
+}    
+
+/*------------- NAVEGACION -------------*/
+
+.navigation .active {
+    transform: translateX(-25em);
+}
+
+#navigation{
+    position: fixed;
+    top: 0;
+    right: -25em;
+    width: 25em;
+    height: 50em;
+    background: #202630;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navigation.active{
+    right: 0;
+}
+
+#navigation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#navigation ul li{
+    list-style: none;
+    margin: auto;
+}
+
+#navigation ul li a{
+    color: #FDD261;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* --------------- CABEZERA ---------------*/
+.header {
+	grid-area: header;
+	padding: 7.5em;
+    background-image: url(../assets/img/banner.png);
+    animation: move 9s infinite linear alternate;
+    background-repeat: no-repeat;
+    background-size: 110%;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+.header .logo {
+    width: 350px;
+	text-align: center;
+}
+
+/* --------------- BANNER ---------------*/
+
+.banner{
+    grid-area: banner;
+    display: grid;
+    position: relative;
+    width: 100%;
+    padding-top: 3.75em;
+    padding-left: 2.1875em;
+    padding-bottom: 0.9375em;
+    background-size: cover;
+    align-items: center;
+    transition: 0.5s;
+    background-color: #EEEEEE;
+	grid-template-columns: 0.8fr 1.3fr;
+}
+
+.banner::before{
+    content : '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#202630,#555A74);
+    clip-path: circle(30% at right 100%);
+}
+
+.banner .text-banner {
+	padding: 1.25em;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    background-color: #FDD261;
+    padding: 1.875em;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.banner .text-banner h2{
+    text-transform: uppercase;
+    color: #202630;
+    font-size: 2.5em;
+}
+
+.banner .text-banner h2 span{
+    text-transform: uppercase;
+    color: #4c9596;;
+    font-size: 1em;
+}
+
+.banner .text-banner p{
+    font-family: 'Questrial', sans-serif;
+    color: #202630;
+    font-weight: 300;
+}
+
+.banner .content-banner {
+	width: 90%;
+    z-index: 1;    
+}
+
+.banner .content-banner .video{
+    width: 90%;
+}
+
+.banner .content-banner .redes-sociales{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 7.5em;
+    top: 9.375em;
+}
+
+.banner .content-banner .redes-sociales li{
+    list-style: none;
+}
+
+.banner .content-banner .redes-sociales li a{
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 3.125em;
+    height: 3.125em;
+    text-decoration: none;
+    border: 1px solid #4c9596;
+    margin: 0.625em 0 0 ;
+    border-radius: 6.25em;
+    background: #555A74;
+}
+
+.banner .content-banner .redes-sociales li a:hover{
+    background: #4c9596;
+}
+
+.banner .content-banner .redes-sociales li a img{
+    max-width: 1.25em;
+    filter: invert(1);
+}
+
+/* ----------- POSTGRADOS -----------*/
+.postgrados{
+    grid-area: postgrados;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    background-color: #EEEEEE;
+    padding: 1.875em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.postgrados::before{
+    content : '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#FDD261,#FDD261);
+    clip-path: circle(35% at right 90%);
+}
+
+.postgrados::after{
+    content : '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: linear-gradient(#4c9596,#4c9596);
+    clip-path: circle(32% at 2% 2%);
+}
+
+.postgrados .cards-postgrados{
+    position: relative;
+    display: flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 2.5em;
+}
+
+.postgrados .cards-postgrados .card{
+    position: relative;
+    width: 18.75em;
+    height:28.75em;
+    margin:0.9375em;
+    border-radius: 0.9375em;
+    background-color :#555A74;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.postgrados .cards-postgrados .card .content-card{
+    padding: 1.25em;
+    text-align: center;
+    transition: 0.5s;
+    transform: translateY(16em);
+    opacity: 1;
+}
+
+.postgrados .cards-postgrados .card:hover .content-card{
+    transform: translateY(0em);
+    opacity: 1;
+}
+
+.postgrados .cards-postgrados .card .content-card .img-card{
+    width: 17.5em;
+    height: 24.375em;
+    border-radius: 0.3125em;
+    margin-bottom: 0.625em;
+    margin-top:  8.625em;
+}
+
+.postgrados .cards-postgrados .card:hover .content-card .img-card{
+    margin-bottom: 0em;
+    margin-top: 0em;
+    width: 16.5625em;
+    height: 10.3125em;
+    border-radius: 0.3125em;
+}
+
+.postgrados .cards-postgrados .card .content-card h2{
+    font-size: 2em;
+}
+
+.postgrados .cards-postgrados .card .content-card h3{
+    font-size: 1.5em;
+    color:#fff;
+    z-index: 1;
+    margin-bottom: 18.75em;
+}
+
+.postgrados .cards-postgrados .card:hover .content-card h3{
+    margin-bottom: 0px;
+}
+
+.postgrados .cards-postgrados .card .content-card p{
+    font-size: 1em;
+    color:#fff;
+    font-weight: 300;
+}
+
+.postgrados .content-postgrados{
+    width: 55%;
+    text-transform: uppercase;
+    color: #202630;
+    text-align: center;
+    z-index: 10;
+    background-color: #4c9596;
+    border-radius: 0.3125em;
+    padding: 0.625em;
+}
+
+/* ----------- ABOUT -----------*/
+.about{
+    padding: 3.125em;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: about;
+    display: flex;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    align-items: center;
+    background-color: #555A74;
+}
+
+.about .content-about{
+    width: 55%;
+    padding: 1.25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    background-color: #202630;
+    margin-top: 3.125em;
+    padding:1.875em;
+    border-radius: 0.3125em;
+}
+
+.about .title-about{
+    width: 70%;
+    text-transform: uppercase;
+    color: #202630;
+    text-align: center;
+    z-index: 10;
+    background-color: #FDD261;
+    border-radius: 0.3125em;
+    padding: 0.9375em;
+}
+
+.content-about h3{
+    text-transform: uppercase;
+    color:#FDD261;
+    margin-bottom:0.9375em;
+    position: relative;
+    font-size: 1.5625em;
+}
+
+.content-about p{
+    padding: 0.3125em;
+    color: #EEEEEE;
+}
+
+.content-about p span{
+    color: #4c9596;
+}
+
+.imagen-about{
+    width: 350px;
+    height: 350px;
+    margin-top: 3em;
+    margin-left: 1.25em;
+    background-image: url(../assets/img/anael.jpeg);
+    /* animation: move 3s infinite linear alternate; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 0.625em;
+}
+/* ----------- INFORMATION -----------*/
+.information{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-area: information;
+    display: flex;
+    position: relative;
+    background-size: cover;
+    align-items: center;
+    background-color: #EEEEEE;
+    padding: 2.8125em;
+}
+
+.information .content-information{
+    width: 45%;
+    padding: 0.25em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    background-color: #4c9596;
+    padding:1.25em;
+    border-radius: 0.3125em;
+}
+
+.content-information h2{
+    text-transform: uppercase;
+    color: #202630;
+}
+
+.content-information h2 span{
+    text-transform: uppercase;
+    color: #EEEEEE;
+}
+
+.content-information p{
+    font-size: 1em;
+    color: #202630;
+}
+
+.content-information .logos{
+    width: 100%;
+    height: 10.25em;
+    background-image: url(../assets/img/ESAM.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 0.625em;
+}
+
+.information .imagen-information{
+    width: 50%;
+    height: 39.25em;
+    margin-right: 2.1875em;
+    background-image: url(../assets/img/esam\ logo.png);
+    background-size: 50%;
+    animation: move 9s infinite linear alternate;
+    border-radius: 100vh 100vh 100vh 100vh;
+}
+
+/* ----------- FOOTER -----------*/
+.footer{
+    grid-area: footer;
+    background-color: #FDD261;
+    align-items: center;
+    flex-direction: column;
+    padding:1.25em ;
+}
+
+.footer .redes-socialesf{
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.footer .redes-socialesf li{
+    list-style: none;
+}
+
+.footer .redes-socialesf li a{
+    text-decoration: none;
+    margin: 0 1.25em;
+}
+
+.footer .redes-socialesf li a img{
+    filter: invert(1);
+    max-width: 1.875em;
+}
+
+.copyrightText{
+    margin-top: 1.25em;
+    font-size: 0.8125em;
+    font-weight: 300;
+    color:#000;
+    text-align: center;
+}
+
+.copyrightText a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* ----------- BOTONES -----------*/
+.btn{
+    color: #EEEEEE;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.625em; 
+	background-color: #4c9596;
+	font-size: 1em; 
+	letter-spacing: 0.0625em;
+	border-radius: 5px;
+    margin: 5px;
+}
+
+.btn-2{
+    color: #202630;
+	width: 18.625em;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.625em; 
+	background-color: #fdd261;
+	font-size: 1em; 
+	letter-spacing: 0.0625em;
+	border-radius: 5px;
+    margin: 5px;
+}
+
+
+.animate-icons{
+    align-items: center;
+}
+
+/*boton de whatsapp*/
+.appWhatsapp{
+    position : fixed;
+    right : 5.625em;
+    bottom : 1.875em;
+    width : 1.25em;
+    z-index : 1000;
+}
+
+@keyframes move{
+    from {
+        background-position:bottom left;
+    }to{
+        background-position:top right;
+    }
+}
+/*----------- MEDIA QUERIES STANDARD ------------ */
+
+@media (max-width: 1200px){
+	body{
+		font-size: 14px;
+    }
+
+    #toggle{
+        right: 10px;
+        top: 6px;
+    }
+
+    .banner .content-banner .redes-sociales{
+        top: 100px;
+        right: 60px;
+    }
+
+}
+
+@media (max-width: 992px){
+    
+    .header {
+        padding: 6em;
+    }
+    
+    .header .logo {
+        width: 200px;
+        text-align: center;
+    }
+	.contenedor {
+		grid-template-areas:
+        'header			header   	header'
+        'banner			banner   	banner'
+        'postgrados		postgrados 	postgrados'
+        'about		    about     	about'
+        'information	information  information'
+        'footer	 		footer 		footer';
+	}
+    
+    .banner .content-banner{
+        width: 100%;
+    }
+
+    .banner .content-banner .redes-sociales{
+        flex-direction: row;
+        top: 70px;
+        right: 150px;
+    }
+    
+    .banner .content-banner .redes-sociales li{
+        padding: 10px;
+    }
+
+    .postgrados .content-postgrados {
+        width: 100%;
+    }
+
+    .btn-2{
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px){
+	
+    .banner {
+		grid-template-columns: 1fr;
+        padding:2.575em;
+	}
+    .banner .content-banner{
+        z-index: 10;
+    }
+    .banner .content-banner .redes-sociales{
+        flex-direction: column;
+        right: 40px;
+        margin-top: 270px;
+    }
+
+    .content-banner .video {
+        width: 31.25em ;
+    }
+    
+    .btn-2{
+        width: 95%;
+    }
+}
+
+@media (max-width: 740px){
+
+    .banner{
+        opacity: 1;
+        padding: 30px 35px 115px;
+    }
+
+    .banner .text-banner{
+        padding:10px;
+    }
+
+    .banner .text-banner h2{
+        font-size: 2em;
+    }
+    .text-banner p{
+        font-size: 1em;
+        margin-top: 170px;
+    }
+
+    .logo{
+        width:140px
+    }
+
+    .banner .content-banner{
+        width: 90%;
+        top: 125px;
+        left: 35px;
+        position: absolute;
+        margin: auto;
+    }
+
+    .banner .content-banner .redes-sociales{
+        flex-direction: row;
+        top: 7.375em;
+        left: 0.0625em;
+    }
+
+    .banner .content-banner .redes-sociales li{
+        padding:10px
+    }
+
+    .contenedor.active {
+        transform: translateX(-250px);
+    }
+
+    .contenedor{
+        transition: 0.2s;
+    }
+
+    /* POSTGRADOS CONTENT 
+    ------------------------------
+    */
+
+    .postgrados{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .postgrados::after{
+        clip-path: circle(13.15% at 1% 1%);
+    }
+
+    .postgrados::before{
+        clip-path: circle(15% at right 60%);
+    }
+
+    .postgrados .content-postgrados{
+        width:90%;
+    }
+    
+    .postgrados .cards-postgrados{
+        padding: 0px;
+    }
+
+    .postgrados .cards-postgrados .card .content-card .img-card{
+        margin-bottom: 0em;
+        margin-top: 7em;
+    }
+    .postgrados .content-posgrados{
+        font-size: 15px;
+    }
+
+    #navigation{
+        width: 250px;
+        transition: 0.2s;
+        right: -250px;
+    }
+
+    #navigation ul li a{
+        font-size: 1.5em;
+        margin: 9px 0;
+    }
+
+    .btn{
+        margin: 5px;
+        padding: 14px 10px;
+        font-size: 1em;
+    }
+
+    .content-banner .redes-sociales{
+        position: absolute;
+        bottom: 50px;
+        right: initial;
+        flex-direction: row;
+    }
+    .content-banner .redes-sociales li a{
+        margin: initial;
+        margin-right: 10px;
+    }
+    .appWhatsapp img{
+        width:45px;
+    }
+    .appWhatsapp{
+        right : 30px;
+        bottom : 15px;
+        width : 30px;
+        z-index : 1000;
+    }
+
+    .about{
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+
+    .about .title-about {
+        width:100%;
+        height: 50px;
+    }
+
+    .about .content-about{
+        width: 90%;
+        height: 65vh;
+        margin: auto;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .about .content-about h2{
+        font-size: 20px;
+    }
+
+    .about .imagen-about{
+        width: 90%;
+        height: 50vh;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* INFORMATION */
+    .information{
+        justify-content: center;
+        max-width: 100%;
+        height: 170vh;
+        padding:0;
+        padding-top: 20px;
+    }
+
+    .information .imagen-information{
+        width: 90%;
+        height: 30%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .information .content-information{
+        max-width: 100%;
+        width: 90%;
+        height: 115vh;
+        display: block;
+        text-align: center;
+        margin-bottom: 150px;
+        padding: 10px;
+    }
+
+    #btn-next{
+        bottom:35px;
+    }   
+
+
+    .information .content-information h2{
+        font-size:25px;
+    }
+
+    .information .content-information p{
+        font-size: 17px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    .information .content-information a{
+        font-size: 17px;
+    }
+
+    .footer{
+        padding: 30px;
+    }
+    .footer .redes-sociales li a img {
+        filter: invert(1);
+        max-width: 30px;
+    }
+}
+
+/* Moto G4 , Galaxy S5  TERMINADO*/
+@media (width: 360px) {
+
+    .about{
+        height: 130vh;
+    }
+    .about .content-about p { 
+        padding: 1px;
+    }
+
+    .about .content-about h3 { 
+        margin-bottom: 0px;
+    }
+
+    .information .content-information{
+        height: 115vh;
+    }
+
+    .information .content-information p{
+        font-size: 15px;
+    }
+    .information .content-information h2{
+        font-size: 20px;
+    }
+}
+/* Pixel 2 SIGUIENTE*/
+@media (width: 411px)  {
+
+    .banner .text-banner h2{
+        margin-bottom: 15px;
+    }
+}
+
+/* Pixel 2 XL */
+@media (height: 823px) {
+
+    .information {
+        height: 150vh;
+    }
+    .information .content-information{
+        height: 100vh;
+    }
+} 
+
+/* Iphone 5/SE */
+@media (width: 320px){ 
+    .banner::before{
+        clip-path: circle(39.8% at left 100%);
+    }
+    .banner{
+        height:50.25em;
+    }
+
+    .banner .text-banner p{
+        margin-top: 10em;
+    }
+
+    .banner .content-banner{
+        top: 35vh;
+    }
+    .banner .content-banner .video{
+        width: 88%;
+    }
+    .banner .content-banner .redes-sociales{
+        margin-top: 19em;
+    }
+
+    .about{
+        height:65.25em;
+    }
+
+    .about .content-about{
+        height:40.25em;
+    }
+
+    .information{
+        height: 93em;
+    }
+
+    .information .content-information{
+        height: 63em;
+    }
+    .information .content-information p {
+        font-size: 15px;
+    }
+
+} 
+
+/* Iphone 6/7/8 */
+@media (width: 375px){ 
+
+    .postgrados::after{
+        clip-path: circle(13.2% at 2% 0.5%);
+    }
+
+    .information{
+        height: 85em;
+    }
+
+    .information .content-information p{
+        font-size: 15px;
+    }
+
+    .information .content-information{
+        height: 56em;
+    }
+    
+}
+
+/* Iphone 6/7/8 Plus */
+@media (width: 414px)  {
+    .banner .text-banner h2{
+        margin-bottom: 20px;
+    }
+}
+
+/* IphoneX*/
+@media (height: 812px){ 
+}
+
+/* IPad Pro*/
+@media (width: 1024px){ 
+}
+
+/*  Surface Duo*/
+@media (width: 540px){
+	.banner .text-banner{
+        height: 40.5em;
+    }
+    .banner .text-banner h2{
+        margin-bottom: 100px;
+    }
+    .banner .content-banner{
+        top: 11em;
+    }
+    .banner .content-banner .video{
+        width: 96.8%;
+    }
+    .banner .content-banner .redes-sociales{
+        margin-top: 23.875em;
+    }
+
+    .information{
+        height: 150vh;
+    }
+    
+    .information .content-information{
+        height: 100vh;
+    }
+}
+
+/* Galaxy Fold */
+@media (width: 280px){
+
+    .header{
+        height: 5em;
+        padding-left:1px;
+    }
+
+    #toggle{
+        right: 25px;
+    }
+
+    .banner{
+        padding: 0.625em;
+        height: 45em;
+    } 
+	.banner .text-banner{
+        width: 100%;
+        left: 1px;
+    }
+    .banner .content-banner{
+        left: 15px;
+        top: 22vh;
+    }
+    .banner .content-banner .video{
+        width: 100%;
+        margin-top: 55px;
+    }
+    .banner .content-banner .redes-sociales{
+        margin-top: 22.5em;
+    }
+
+    .about {
+        height: 70em;
+    }
+
+    .about .content-about{
+        height: 40em;
+    }
+
+    .information {
+        height: 100em;
+    }
+
+    .information .content-information p{
+        font-size: 15px
+    }
+    .information .content-information{
+        height: 68em;
+    }
+}
+
+/* FALTA LOS HORIZONTALES */
