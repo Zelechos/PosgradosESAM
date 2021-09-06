@@ -45,35 +45,35 @@ a{
 
 /* ---------- HEADER ----------*/
 .nutricion{
-	background-image: url(../assets/img/nutricionista.jpg);
+	background-image: url(../assets/img/nutricionista.webp);
 }
 
 .calidadsalud{
-	background-image: url(../assets/img/calidadsalud.jpg);
+	background-image: url(../assets/img/calidadsalud.webp);
 }
 
 .gerencia{
-	background-image: url(../assets/img/gerenciasalud.jpg);
+	background-image: url(../assets/img/gerenciasalud.webp);
 }
 
 .epidemiologiasalud{
-	background-image: url(../assets/img/epidemiologiasalud.jpeg);
+	background-image: url(../assets/img/epidemiologiasalud.webp);
 }
 
 .derechofamilia{
-	background-image: url(../assets/img/derechofamiliajpg.jpg);
+	background-image: url(../assets/img/derechofamiliabanner.webp);
 }
 
 .estructural{
-	background-image: url(../assets/img/banner.jpg);
+	background-image: url(../assets/img/banneringenieria.webp);
 }
 
 .epipolitica{
-	background-image: url(../assets/img/epidemiologiasalud.jpeg);
+	background-image: url(../assets/img/epidemiologiasalud.webp);
 }
 
 .publica{
-	background-image: url(../assets/img/calidadsalud.jpg);
+	background-image: url(../assets/img/calidadsalud.webp);
 }
 
 .header {
@@ -554,35 +554,35 @@ a{
 @media (max-width: 768px){
 
 	.nutricion{
-		background-image: url(../assets/img/nutricion-especializada.jpeg);
+		background-image: url(../assets/img/nutricion-especializada.webp);
 	}
 
 	.calidadsalud{
-		background-image: url(../assets/img/gestion-calidad.jpeg);
+		background-image: url(../assets/img/gestion-calidad.webp);
 	}
 
 	.gerencia{
-		background-image: url(../assets/img/gestion-hospitalaria.jpeg);
+		background-image: url(../assets/img/gestion-hospitalaria.webp);
 	}
 
 	.derechofamilia{
-		background-image: url(../assets/img/derecho-familia.jpeg);
+		background-image: url(../assets/img/derecho-familia.webp);
 	}
 
 	.estructural{
-		background-image: url(../assets/img/ingenieria-estructural.jpeg);
+		background-image: url(../assets/img/ingenieria-estructural.webp);
 	}
 
 	.epipolitica{
-		background-image: url(../assets/img/epidemiologia-politicas.jpeg);
+		background-image: url(../assets/img/epidemiologia-politicas.webp);
 	}
 
 	.publica{
-		background-image: url(../assets/img/salud-publica.jpeg);
+		background-image: url(../assets/img/salud-publica.webp);
 	}
 
 	.epidemiologiasalud{
-		background-image: url(../assets/img/salud-publica.jpeg);
+		background-image: url(../assets/img/salud-publica.webp);
 	}
 
 	.postgrado-elegido.destacado {

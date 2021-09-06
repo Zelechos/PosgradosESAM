@@ -140,7 +140,7 @@ a {
 .header {
 	grid-area: header;
 	padding: 7.5em;
-    background-image: url(../assets/img/banner.png);
+    background-image: url(../assets/img/banner.webp);
     animation: move 9s infinite linear alternate;
     background-repeat: no-repeat;
     background-size: 110%;
@@ -434,7 +434,7 @@ a {
     height: 350px;
     margin-top: 3em;
     margin-left: 1.25em;
-    background-image: url(../assets/img/anael.jpeg);
+    background-image: url(../assets/img/anael.webp);
     /* animation: move 3s infinite linear alternate; */
     background-repeat: no-repeat;
     background-size: 100%;
@@ -483,7 +483,7 @@ a {
 .content-information .logos{
     width: 100%;
     height: 10.25em;
-    background-image: url(../assets/img/ESAM.png);
+    background-image: url(../assets/img/ESAM.webp);
     background-repeat: no-repeat;
     background-size: 100%;
     margin-top: 0.625em;
@@ -493,7 +493,7 @@ a {
     width: 50%;
     height: 39.25em;
     margin-right: 2.1875em;
-    background-image: url(../assets/img/esam\ logo.png);
+    background-image: url(../assets/img/esam\ logo.webp);
     background-size: 50%;
     animation: move 9s infinite linear alternate;
     border-radius: 100vh 100vh 100vh 100vh;
