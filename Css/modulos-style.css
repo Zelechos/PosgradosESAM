@@ -48,6 +48,7 @@ body{
     text-transform: uppercase;
     color: #202630;
     text-align: center;
+    background-image: url(../assets/img/bg-banner.webp);
     background-color: #FDD261;
     border-radius: 0.3125em;
     padding: 0.9375em;

@@ -117,6 +117,7 @@ a{
 	grid-area: destacado;
 	color: #EEEEEE;
 	background-color: #202630;
+	background-image: url(../assets/img/bg-banner.webp);
 	display: grid;
 	grid-template-columns: 1.3fr 1fr;
 }
@@ -197,7 +198,7 @@ a{
     position: relative;
     background-size: cover;
     align-items: center;
-    background-color: #FDD261;
+    background-image: url(../assets/img/bg-banner.webp);
 }
 
 .especificacion .content-especificacion{
@@ -205,7 +206,8 @@ a{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-    background-color: #202630;
+	background-image: url(../assets/img/bg-about.webp);
+	background-size: 100% 100%;
     margin-top: 3.125em;
     padding:1.875em;
     border-radius: 0.3125em;
@@ -251,32 +253,11 @@ a{
     position: relative;
     background-size: cover;
     align-items: center;
-    background-color: #EEEEEE;
+	background-image: url(../assets/img/bg-posgrados.webp);	
+	background-size: 100% 100%;
     padding: 1.875em;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.aclaracion::before{
-    content : '';
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(#FDD261,#FDD261);
-    clip-path: circle(35% at right 90%);
-}
-
-.aclaracion::after{
-    content : '';
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(#4c9596,#4c9596);
-    clip-path: circle(32% at 2% 2%);
 }
 
 .aclaracion .cards-aclaracion{
@@ -303,16 +284,11 @@ a{
     z-index: 5;
 }
 
-/* .aclaracion .cards-aclaracion .card:hover{
-	box-shadow: 10px 10px 10px 10px #4c9596;
-} */
-
 .aclaracion .cards-aclaracion .card .content-card{
     padding: 0.7em;
     text-align: center;
     transition: 0.5s;
 }
-
 
 .aclaracion .cards-aclaracion .card .content-card .img-card{
 	width: 80%;
@@ -406,9 +382,8 @@ a{
 	text-align: center;
 	min-height: 6.25em; 
 	grid-area: aside;
-	background: #202630;
+	background-image: url(../assets/img/bg-banner.webp);
 	color: #4c9596;
-	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
 }
 
 .sidebar:hover{

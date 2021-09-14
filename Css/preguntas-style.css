@@ -45,10 +45,12 @@ a{
 .title-preguntas{
     margin: 0 auto;
     text-transform: uppercase;
-    color: #202630;
+    color: #FDD261;
     text-align: center;
-    background-color: #4c9596;
-    border-radius: 0.3125em;
+    background-image: url(../assets/img/bg-banner.webp);
+    background-color: #202630;
+    border: 1px solid #FDD261;
+    border-radius: 0.5125em;
     padding: 0.9375em;
 }
 
@@ -62,7 +64,8 @@ a{
     flex-wrap: wrap;
 	grid-area: preguntas;
     position: relative;
-	background-color: #FDD261;
+    background-image: url(../assets/img/bg-about.webp);
+    background-size: 100% 100%;
     justify-content: center;
     align-items: center;
     padding: 50px;
@@ -166,15 +169,16 @@ a{
 }
 
 .btn-2{
-    color: #202630;
+    color: #FDD261;
 	width: 18.625em;
 	cursor: pointer;
 	display: inline-block;
 	padding: 0.625em; 
-	background-color: #4c9596;
+	background-color: #202630;
 	font-size: 1em; 
 	letter-spacing: 0.0625em;
 	border-radius: 5px;
+    border : 1px solid #FDD261;
     margin: 35px;
 }
 
