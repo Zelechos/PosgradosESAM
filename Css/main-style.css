@@ -32,7 +32,7 @@ a {
     right: 3.75em;
     top: 0.875em;
     cursor: pointer;
-    background-color: #4c9596;
+    background-color: #202630;
     border-radius:0.25em;
     z-index: 100;
 }
@@ -44,7 +44,7 @@ a {
     width: 50%;
     height: 0.125em;
     left: 0.75em;
-    background: #EEEEEE;
+    background: #fdd261;
 }
 
 #toggle:after{
@@ -54,7 +54,7 @@ a {
     bottom: 1.0625em;
     width: 50%;
     height: 0.125em;
-    background: #EEEEEE;
+    background: #fdd261;
 }
 
 
@@ -100,12 +100,14 @@ a {
 }
 
 #navigation{
+    background-image: url(../assets/img/bg-posgrados.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     position: fixed;
     top: 0;
     right: -25em;
     width: 25em;
-    height: 50em;
-    background: #202630;
+    height: 100%;
     z-index: 1;
     display: grid;
     place-items: center;
@@ -128,6 +130,9 @@ a {
 }
 
 #navigation ul li a{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #202630;
     color: #FDD261;
     text-decoration: none;
     display: inline-block;
@@ -167,17 +172,8 @@ a {
     transition: 0.5s;
     background-color: #EEEEEE;
 	grid-template-columns: 0.8fr 1.3fr;
-}
-
-.banner::before{
-    content : '';
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(#202630,#555A74);
-    clip-path: circle(30% at right 100%);
+    background-image: url(../assets/img/bg-banner.webp);
+    background-color: #202630;
 }
 
 .banner .text-banner {
@@ -238,14 +234,14 @@ a {
     width: 3.125em;
     height: 3.125em;
     text-decoration: none;
-    border: 1px solid #4c9596;
+    border: 2px solid #fdd261;
     margin: 0.625em 0 0 ;
     border-radius: 6.25em;
-    background: #555A74;
+    background: #202630;
 }
 
 .banner .content-banner .redes-sociales li a:hover{
-    background: #4c9596;
+    background: #fdd261;
 }
 
 .banner .content-banner .redes-sociales li a img{
@@ -261,32 +257,12 @@ a {
     width: 100%;
     background-size: cover;
     align-items: center;
-    background-color: #EEEEEE;
+    background-image: url(../assets/img/bg-posgrados.webp);
+    background-size: 100%;
     padding: 1.875em;
     flex-wrap: wrap;
     justify-content: center;
-}
 
-.postgrados::before{
-    content : '';
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(#FDD261,#FDD261);
-    clip-path: circle(35% at right 90%);
-}
-
-.postgrados::after{
-    content : '';
-    position: absolute;
-    top: 0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: linear-gradient(#4c9596,#4c9596);
-    clip-path: circle(32% at 2% 2%);
 }
 
 .postgrados .cards-postgrados{
@@ -306,7 +282,7 @@ a {
     height:28.75em;
     margin:0.9375em;
     border-radius: 0.9375em;
-    background-color :#555A74;
+    background-color :#202630;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -349,7 +325,7 @@ a {
 
 .postgrados .cards-postgrados .card .content-card h3{
     font-size: 1.5em;
-    color:#fff;
+    color:#fdd261;
     z-index: 1;
     margin-bottom: 18.75em;
 }
@@ -367,10 +343,11 @@ a {
 .postgrados .content-postgrados{
     width: 55%;
     text-transform: uppercase;
-    color: #202630;
+    color: #fdd261;
     text-align: center;
     z-index: 10;
-    background-color: #4c9596;
+    background-image: url(../assets/img/bg-banner.webp);
+    background-color: #202630;
     border-radius: 0.3125em;
     padding: 0.625em;
 }
@@ -384,9 +361,10 @@ a {
     display: flex;
     position: relative;
     width: 100%;
-    background-size: cover;
     align-items: center;
-    background-color: #555A74;
+    background-image: url(../assets/img/bg-about.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .about .content-about{
@@ -399,9 +377,12 @@ a {
     margin-top: 3.125em;
     padding:1.875em;
     border-radius: 0.3125em;
+
 }
 
 .about .title-about{
+    background-image: url(../assets/img/bg-banner.webp);
+
     width: 70%;
     text-transform: uppercase;
     color: #202630;
@@ -450,6 +431,7 @@ a {
     position: relative;
     background-size: cover;
     align-items: center;
+    background-image: url(../assets/img/bg-information\ .webp);
     background-color: #EEEEEE;
     padding: 2.8125em;
 }
@@ -543,22 +525,25 @@ a {
 
 /* ----------- BOTONES -----------*/
 .btn{
-    color: #EEEEEE;
-	cursor: pointer;
 	display: inline-block;
+	width: 8.625em;
+	cursor: pointer;
+    color: #FDD261;
 	padding: 0.625em; 
-	background-color: #4c9596;
+    background-color: #202630;
 	font-size: 1em; 
 	letter-spacing: 0.0625em;
 	border-radius: 5px;
+    border: 1px solid #fdd261;
     margin: 5px;
 }
 
 .btn-2{
+    text-transform: initial;
+	display: inline-block;
     color: #202630;
 	width: 18.625em;
 	cursor: pointer;
-	display: inline-block;
 	padding: 0.625em; 
 	background-color: #fdd261;
 	font-size: 1em; 
