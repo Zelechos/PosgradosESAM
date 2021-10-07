@@ -21,9 +21,15 @@
 
 ## Diagrama de Secuencias
 -------------------------------------------------------------------
+<<<<<<< HEAD
 ![]("DiagramaSecuencias.jpg")
 
 
+=======
+![]("./assets/img/DiagramaSecuencias.jpg")
+
+=======
+>>>>>>> 2bb2ccde154b8883a7d952367a28ef70a2711a4c
 # Version Actual
 -------------------------------------------------------------------
 ## [v0.2.4](https://github.com/Zelechos/PosgradosESAM/releases/tag/v0.2.4)
