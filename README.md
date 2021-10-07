@@ -6,7 +6,7 @@
 
 ## Diagrama de Casos Uso
 -------------------------------------------------------------------
-![]("DiagramaCasosUso.jpg")
+![]("https://raw.githubusercontent.com/Zelechos/PosgradosESAM/master/DiagramaCasosUso.jpg")
 
 
 ## Diagrama de Componentes
