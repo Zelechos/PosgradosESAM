@@ -6,7 +6,7 @@
 
 ## Diagrama de Casos Uso
 -------------------------------------------------------------------
-![]("https://raw.githubusercontent.com/Zelechos/PosgradosESAM/master/DiagramaCasosUso.jpg")
+<img align="left" width="300" src="https://raw.githubusercontent.com/firstcontributions/assets/master/gui-tool-tutorials/github-windows-vs2017-tutorial/fork.png"/>
 
 
 ## Diagrama de Componentes
