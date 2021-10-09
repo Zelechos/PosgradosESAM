@@ -6,24 +6,24 @@
 
 ## Diagrama de Casos Uso
 -------------------------------------------------------------------
-<img align="left" width="300" src="https://raw.githubusercontent.com/firstcontributions/assets/master/gui-tool-tutorials/github-windows-vs2017-tutorial/fork.png"/>
+<img align="center" width="900" src="https://raw.githubusercontent.com/Zelechos/PosgradosESAM/master/DiagramaCasosUso.jpg"/>
 
 
 ## Diagrama de Componentes
 -------------------------------------------------------------------
-![]("DiagramaComponente.jpg")
+<img align="center" width="900" src="https://raw.githubusercontent.com/Zelechos/PosgradosESAM/master/DiagramaComponente.jpg"/>
 
 
 ## Diagrama de Despliegue
 -------------------------------------------------------------------
-![]("DiagramaDespliegue.jpg")
+<img align="center" width="900" src="https://raw.githubusercontent.com/Zelechos/PosgradosESAM/master/DiagramaDespliegue.jpg"/>
 
 
 ## Diagrama de Secuencias
 -------------------------------------------------------------------
-![]("DiagramaSecuencias.jpg")
+<img align="center" width="900" src="https://raw.githubusercontent.com/Zelechos/PosgradosESAM/master/DiagramaSecuencias.jpg"/>
 
-=======
+
 # Version Actual
 -------------------------------------------------------------------
 ## [v0.2.4](https://github.com/Zelechos/PosgradosESAM/releases/tag/v0.2.4)
