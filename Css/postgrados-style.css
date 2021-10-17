@@ -123,11 +123,11 @@ a{
 }
 
 .postgrado-elegido .contenedor-texto {
-	padding: 1.5em;
-	width: 85%;
+	padding: 1.7em;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	font-size: inherit;
 }
 
 .postgrado-elegido .contenedor-thumbnail {
@@ -135,7 +135,7 @@ a{
 }
 
 .postgrado-elegido .titulo {
-	margin-bottom: 0.625em;
+	margin-bottom: 0.925em;
 	font-size: 1.5625em;
 }
 
@@ -153,7 +153,7 @@ a{
 .postgrado-elegido .extracto {
 	line-height: 1.5625em; 
 	font-weight: 300;
-	margin-bottom: 1.25em; 
+	margin-bottom: 7.25em; 
 	color: #4c9596;
 }
 
@@ -170,20 +170,20 @@ a{
 
 .destacado .titulo a {
 	color: #fdd261;
-	font-size:20px;
+	font-size: 50px;
 }
 
 .destacado .titulo::after {
 	content: '';
 	margin: 0.625em 0; 
 	display: block;
-	background-color: #868686;
-	width: 6em; 
-	height: 0.0625em;
+	background-color: #fdd261;
+	width: 20em; 
+	height: 0.0925em;
 }
 
 .destacado .extracto li {
-	font-size:20px;
+	font-size: 20px;
 	color: #EEEEEE;
 }
 
