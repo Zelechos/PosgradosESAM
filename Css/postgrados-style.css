@@ -562,6 +562,17 @@ a{
 		background-image: url(../assets/img/salud-publica.webp);
 	}
 
+	.contenedor-texto{
+		height: 400px;
+	}
+	.destacado .titulo a {
+		font-size: 25px;
+	}
+
+	.destacado .extracto li {
+		font-size: 17px;
+	}
+
 	.postgrado-elegido.destacado {
 		grid-template-columns: 1fr;
 	}	
