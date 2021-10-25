@@ -565,6 +565,7 @@ a{
 	.contenedor-texto{
 		height: 430px;
 	}
+
 	.destacado .titulo a {
 		font-size: 25px;
 	}
@@ -595,6 +596,31 @@ a{
 @media (max-width: 576px){
 	body{
 		font-size: 10px;
+	}
+
+	
+}
+
+@media (width: 280px){
+
+	.contenedor-texto{
+		width: 200px;
+	}
+
+	.btn-link {
+		font-size: 14px;
+	}
+
+	.destacado .titulo::after {
+		width: 100%;
+	}
+
+	.destacado .titulo a {
+		font-size: 22px;
+	}
+
+	.destacado .extracto li {
+		font-size: 15px;
 	}
 }
 
