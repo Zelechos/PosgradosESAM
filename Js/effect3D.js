@@ -4,15 +4,16 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
     speed: 400
 });
 
-VanillaTilt.init(document.querySelector(".imagen-information"), {
+VanillaTilt.init(document.querySelector(".image-about"), {
     max: 25,
     speed: 400
 });
 
-VanillaTilt.init(document.querySelector(".imagen-about"), {
+VanillaTilt.init(document.querySelector(".image-information"), {
     max: 25,
     speed: 400
 });
+
 
 VanillaTilt.init(document.querySelector(".text-banner"), {
     max: 25,

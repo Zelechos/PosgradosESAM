@@ -2,10 +2,10 @@
 
 //Funcion que maneja el toggle
 function toggle(){
-    let content = document.getElementById('contenedor');
-    content.classList.toggle('active');
-    let nav = document.getElementById('navigation');
-    nav.classList.toggle('active');
+    const container = document.getElementById('container');
+    container.classList.toggle('active');
+    const navigation = document.getElementById('navigation');
+    navigation.classList.toggle('active');
 }
 
 // Funcion para manejar lo cuadros movibles
